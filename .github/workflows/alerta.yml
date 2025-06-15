@@ -10,10 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Enviar notificación a ntfy.sh
-      run: |
-      curl -H "Title: Nuevo push al repositorio" \
-           -H "Priority: high" \
-           -d "El usuario Pozo15 hizo un push al repositorio en la rama main 🚀" \
-           https://ntfy.sh/devops-itla
-    
+      - name: Enviar notificación a ntfy.sh      
+        run: |
+          curl -H "Title: Nuevo push al repositorio" \
+               -H "Priority: high" \
+               -d "El usuario Pozo15 hizo un push al repositorio en la rama main 🚀" \
+               https://ntfy.sh/devops-itla
+
+
+
+
+
+        
