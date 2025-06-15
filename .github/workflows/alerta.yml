@@ -1,0 +1,18 @@
+name: Alerta de push a main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Enviar notificación a ntfy.sh
+        run: |
+          curl -H "Title: Nuevo push al repositorio" \
+               -H "Priority: high" \
+               -d "Se ha subido código nuevo al repositorio en la rama main 🚀" \
+               https://ntfy.sh/devops-itla
